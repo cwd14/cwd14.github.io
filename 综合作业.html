@@ -1,0 +1,1342 @@
+<html>
+<head>
+<title>Find his brother</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type= "text/css" href= "game.css">
+</head>
+<body  class="body">
+
+	<!--下面是第一层div-->
+	<div class= "FirstFloor"></div>
+	<div class= "SecondFloor"></div>
+	<div class= "ThirdFloor"></div>
+	<div class= "BloodOfGenji">
+		<div id= "Hp"><h3>Hp:</h3></div>
+		<div class="myblood" id= "FirstBlood"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+		<div class="myblood" id= "SecondBlood"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+		<div class="myblood" id= "ThirdBlood"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+		<div class="myblood" id= "ForthBlood"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+		<div class="myblood" id= "FifthBlood"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+		<div class="myblood" id= "SixthBlood"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+	</div>
+	
+	<div class= "BloodOfHanzo">
+		<div id= "BossHp"><h3>Hp:</h3></div>
+		<div class="bossBlood" id= "FirstBloodOfBoss"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+		<div class="bossBlood" id= "SecondBloodOfBoss"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+		<div class="bossBlood" id= "ThirdBloodOfBoss"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+		<div class="bossBlood" id= "ForthBloodOfBoss"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+		<div class="bossBlood" id= "FifthBloodOfBoss"><img src= "BloodCircle.png" width= "100%" height= "100%"></div>
+		<div class="bossBlood" id= "numberOfBossBlood"><h3>* 6</h3></div> 
+	</div>
+
+	<div id= "master"><img id="player" src = "00.png" width= "100%" height= "100%"/></div>
+	<div class= "Hanzo"><img id="BOSSBZ" src = "初遇.png" width= "100%" height= "100%"/></div>
+	<div id="weapen"><img id="BZw" src="weapen.png" width= "100%" height= "100%"/></div>
+	<div id= "darts"><img id="dart" src = "cart01.png" width= "100%" height= "100%"/></div>
+	<div class= "EmplacementOnFirstFloor">
+		<div class="EM" id= "Emplacement0101"><img class="EMPIC" src= "emplacement03.png" width= "100%" height= "100%"/></div>
+		<div id= "Emplacement0102"></div>
+		<div id= "Emplacement0103"></div>
+		<div id= "Emplacement0104"></div>
+		<div class="bullet"><img src="bulletRight.png"/></div>
+	</div>
+	<div class= "EmplacementOnSecondFloor">
+		<div class="EM" id= "Emplacement0201"><img class="EMPIC" src= "emplacement02.png" width= "100%" height= "100%"/></div>
+		<div class="EM" id= "Emplacement0202"><img class="EMPIC" src= "emplacement02.png" width= "100%" height= "100%"/></div>
+		<div class="EM" id= "Emplacement0203"><img class="EMPIC" src= "emplacement03.png" width= "100%" height= "100%"/></div>
+		<div class="EM" id= "Emplacement0204"><img class="EMPIC" src= "emplacement02.png" width= "100%" height= "100%"/></div>
+		<div class="EM" id= "Emplacement0205"><img class="EMPIC" src= "emplacement02.png" width= "100%" height= "100%"/></div>
+		<div class="EM" id= "Emplacement0206"><img class="EMPIC" src= "emplacement02.png" width= "100%" height= "100%"/></div>
+		<div class="EM" id= "Emplacement0207"><img class="EMPIC" src= "emplacement02.png" width= "100%" height= "100%"/></div>
+		<div class="bullet"><img src="bulletLeft.png"/></div>
+		<div class="bullet"><img src="bulletLeft.png"/></div>
+		<div class="bullet"><img src="bulletRight.png"/></div>
+		<div class="bullet"><img src="bulletLeft.png"/></div>
+		<div class="bullet"><img src="bulletLeft.png"/></div>
+		<div class="bullet"><img src="bulletLeft.png"/></div>
+		<div class="bullet"><img src="bulletLeft.png"/></div>
+	</div>
+	<div class= "EmplacementOnThirdFloor">
+		<div class="EM" id= "Emplacement0301"><img class="EMPIC" src= "emplacement02.png" width= "100%" height= "100%"/></div>
+		<div class="EM" id= "Emplacement0302"><img class="EMPIC" src= "emplacement03.png" width= "100%" height= "100%"/></div>
+		<div class="EM" id= "Emplacement0303"><img class="EMPIC" src= "emplacement02.png" width= "100%" height= "100%"/></div>
+		<div class="EM" id= "Emplacement0304"><img class="EMPIC" src= "emplacement02.png" width= "100%" height= "100%"/></div>
+		<div class="EM" id= "Emplacement0305"><img class="EMPIC" src= "emplacement02.png" width= "100%" height= "100%"/></div>
+		<div class="bullet"><img src="bulletLeft.png"/></div>
+		<div class="bullet"><img src="bulletRight.png"/></div>
+		<div class="bullet"><img src="bulletLeft.png"/></div>
+		<div class="bullet"><img src="bulletLeft.png"/></div>
+		<div class="bullet"><img src="bulletLeft.png"/></div>
+	</div>
+	
+	<div class= "topFloor"></div>
+		<div id="video"><video id="videoShow"  >您的浏览器不支持 video 标签。</video></div>
+		<audio id="audio" src="bgm.mp3" autoplay="autoplay" loop="loop"></audio>
+		<audio id="boomAudio" src="Boom.mp3" loop="loop"></audio>
+	<script type = "text/javascript">
+		
+		//这个函数用于动态添加div
+		function createSecondDiv(left,length)
+		{
+			var newDiv = document.createElement('div');
+			newDiv.style.position = "absolute";
+			newDiv.style.width = length + "px";
+			newDiv.style.height = "100%";
+			newDiv.style.left = left + "px";
+			newDiv.style.float = "left";
+			newDiv.style.backgroundImage = "url(Floor.png)";
+			document.getElementsByClassName("SecondFloor")[0].appendChild(newDiv);
+		}
+		function createThirdDiv(left,length)
+		{
+			var newDiv = document.createElement('div');
+			newDiv.style.position = "absolute";
+			newDiv.style.width = length + "px";
+			newDiv.style.height = "100%";
+			newDiv.style.left = left + "px";
+			newDiv.style.float = "left";
+			newDiv.style.backgroundImage = "url(Floor.png)";
+			document.getElementsByClassName("ThirdFloor")[0].appendChild(newDiv);
+		}
+		//这里是添加墙壁的div
+		function createWall(left,height,bottom)
+		{
+			var newDiv = document.createElement('div');
+			newDiv.style.position = "absolute";
+			newDiv.style.width = "64px";
+			newDiv.style.height = height + "%";
+			newDiv.style.left = left + "px";
+			newDiv.style.bottom = bottom + "%";
+			newDiv.style.backgroundImage = "url(Floor.png)";
+			newDiv.className = "wall";
+			document.getElementsByClassName("body")[0].appendChild(newDiv);
+		}
+		//第二层：600+500， 1500+500，2300+1000,3400+300,3900+500,4600+1000, 5800+400, 6600+400
+		//        7300+300, 7900+300, 7450+600
+ 		//第三层：600+500， 2200+1000,3200+700, 4100+800,6200+400,7450+600
+		//墙壁：1936+520+54, 2200+250+54, 2200+250+624,3400+270+300
+		//		3400+235+340, 4336+235+340 ,5800+235+54,6136+289+340
+		//      6600+289+340, 6936+235+54
+		createSecondDiv(600, 500);
+		createThirdDiv(800, 1200);
+		createSecondDiv(1500,500);
+		createWall(1936,60,6);
+		createSecondDiv(2200,1000);
+		createThirdDiv(2200,800);
+		createWall(2200,27,6);
+		createWall(2200,26,69);
+		createThirdDiv(3200,700);
+		createThirdDiv(4100,800);
+		createSecondDiv(3400,300);
+		createSecondDiv(3900,500);
+		createWall(3400,28,38);
+		createWall(4336,28,38);
+		createWall(4336,28,6);
+		createSecondDiv(4600,1000);
+		createWall(4836,28,39);
+		createSecondDiv(5800,400);
+		createThirdDiv(6200,400);
+		createSecondDiv(6600,400);
+		createWall(5800,27,6);
+		createWall(6136,34,38);
+		createWall(6600,34,38);
+		createWall(6936,27,6);
+		createSecondDiv(7300,300);
+		createSecondDiv(7900,300);
+		createThirdDiv(7450,600);
+		createSecondDiv(9100,400);
+		createSecondDiv(10700,300);
+		createThirdDiv(9100,200);
+		createThirdDiv(10700,300);
+		var left_wall = new Array(1936,2200 ,2200 ,3400 ,4336 ,4336 , 4836,5800 , 6136, 6600, 6936);
+		var bottom_wall = new Array();
+		var height_wall = new Array();
+		//console.log(left_wall);
+		// alert(document.getElementById("dart").width);
+		//下面用于按键事件
+	window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+			var moveX_master = 0;
+			var moveY_master = 5 ;
+			var X_target = moveX_master; 
+			var Y_target = moveY_master;
+			var vx = 0,
+			vy = 1,
+			gravity = -0.1;
+			var keyFlag = 0;//是不是禁用二级跳
+			var facetoright = true;//判断发飞镖
+			var dartX = moveX_master + 85;//飞镖位置
+			var dartY = moveY_master+4;	
+			var dartTarget = dartX;
+			var floorBottom = 5;//底层5,二层38,三层71
+			var pageflag = true;			
+			var myAudio=document.getElementById("audio");//bgm
+			var boomSound = document.getElementById("boomAudio");//爆炸声 
+			function betweenFloor()//为跳跃而用
+			{
+				//下面是向上跳到另外一个楼层
+				if(moveY_master>=38&&moveY_master<71&&moveX_master<600-document.getElementById("player").width)//二层与一层
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=600-document.getElementById("player").width&&moveX_master<=1090)
+				{
+					floorBottom = 38;
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>1090&&moveX_master<1500-document.getElementById("player").width)
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=1500-document.getElementById("player").width&&moveX_master<=2000)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>2000&&moveX_master<2200-document.getElementById("player").width)
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=2200-document.getElementById("player").width&&moveX_master<=3195)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>3195&&moveX_master<3400-document.getElementById("player").width)
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=3450-document.getElementById("player").width&&moveX_master<=3690)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>3690&&moveX_master<3895-document.getElementById("player").width)
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=3895-document.getElementById("player").width&&moveX_master<=4325)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>4340&&moveX_master<4595-document.getElementById("player").width)
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=4595-document.getElementById("player").width&&moveX_master<=5590)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>5590&&moveX_master<5795-document.getElementById("player").width)
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=5795-document.getElementById("player").width&&moveX_master<=6130)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=6670-document.getElementById("player").width&&moveX_master<=6990)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>6990&&moveX_master<7295-document.getElementById("player").width)
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=7295-document.getElementById("player").width&&moveX_master<=7590)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>7590&&moveX_master<7895-document.getElementById("player").width)
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=7895-document.getElementById("player").width&&moveX_master<=8190)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>8190&&moveX_master<9095-document.getElementById("player").width)
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=9095-document.getElementById("player").width&&moveX_master<=9490)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>9490&&moveX_master<10695-document.getElementById("player").width)
+				{
+					floorBottom = 5;
+				}
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=10695-document.getElementById("player").width&&moveX_master<=11000)
+				{
+					floorBottom = 38;
+				}
+				/////////////////////////二层与三层
+				if(moveY_master>=71&&moveY_master<88&&moveX_master<795-document.getElementById("player").width)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>=795-document.getElementById("player").width&&moveX_master<=1995)
+				{
+					floorBottom = 71;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>1995&&moveX_master<2200-document.getElementById("player").width)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>=2200-document.getElementById("player").width&&moveX_master<=2990)
+				{
+					floorBottom = 71;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>2990&&moveX_master<3195-document.getElementById("player").width)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>=3195-document.getElementById("player").width&&moveX_master<=3895)
+				{
+					floorBottom = 71;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>3895&&moveX_master<4095-document.getElementById("player").width)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>=4095-document.getElementById("player").width&&moveX_master<=4895)
+				{
+					floorBottom = 71;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>4895&&moveX_master<6130-document.getElementById("player").width)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>=6130-document.getElementById("player").width&&moveX_master<=6655)
+				{
+					floorBottom = 71;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>6655&&moveX_master<7445-document.getElementById("player").width)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>=7445-document.getElementById("player").width&&moveX_master<=8045)
+				{
+					floorBottom = 71;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>8045&&moveX_master<9095-document.getElementById("player").width)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>=9095-document.getElementById("player").width&&moveX_master<=9290)
+				{
+					floorBottom = 71;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>9290&&moveX_master<10695-document.getElementById("player").width)
+				{
+					floorBottom = 38;
+				}
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>=10695-document.getElementById("player").width&&moveX_master<=11000)
+				{
+					floorBottom = 71;
+				}
+				
+			}
+			function steptodrop()//从上一层掉落到下一层
+			{
+				moveY_master += vy;
+				vy += gravity;
+				if(moveY_master <= floorBottom)
+				{
+					moveY_master = floorBottom;
+				}
+				document.getElementById("master").style.left= moveX_master + "px";
+				document.getElementById("master").style.bottom= moveY_master + "%";
+				if(moveY_master > floorBottom)
+				{
+				
+					requestAnimationFrame(steptodrop);
+				}
+			}
+			function dropone()//从上一层掉落到下一层
+			{
+				
+				vy = 0;
+				gravity = -0.005;
+				requestAnimationFrame(steptodrop);
+			}
+			function dropFloor()//走路的时候掉下来
+			{
+				if(moveY_master>=38&&moveY_master<71&&moveX_master<600-document.getElementById("player").width)//二层与一层
+				{
+					floorBottom = 5;
+					dropone();
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>1090&&moveX_master<1500-document.getElementById("player").width)
+				{floorBottom = 5;
+					dropone();
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>2000&&moveX_master<2200-document.getElementById("player").width)
+				{floorBottom = 5;
+					dropone();
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>3195&&moveX_master<3400-document.getElementById("player").width)
+				{floorBottom = 5;
+					dropone();
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>3690&&moveX_master<3895-document.getElementById("player").width)
+				{floorBottom = 5;
+					dropone();
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>4340&&moveX_master<4595-document.getElementById("player").width)
+				{floorBottom = 5;
+					dropone();
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>5590&&moveX_master<5795-document.getElementById("player").width)
+				{floorBottom = 5;
+					dropone();
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>6990&&moveX_master<7295-document.getElementById("player").width)
+				{floorBottom = 5;
+					dropone();
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>7590&&moveX_master<7895-document.getElementById("player").width)
+				{floorBottom = 5;
+					dropone();
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>8190&&moveX_master<9095-document.getElementById("player").width)
+				{floorBottom = 5;
+					dropone();
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>9490&&moveX_master<10695-document.getElementById("player").width)
+				{floorBottom = 5;
+					dropone();
+				}
+				/////////////////////////二层与三层
+				if(moveY_master>=71&&moveY_master<88&&moveX_master<795-document.getElementById("player").width)
+				{
+					floorBottom = 38;dropone();
+				}
+				
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>1995&&moveX_master<2200-document.getElementById("player").width)
+				{
+					floorBottom = 38;dropone();
+				}
+				
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>2990&&moveX_master<3195-document.getElementById("player").width)
+				{
+					floorBottom = 38;dropone();
+				}
+				
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>3895&&moveX_master<4095-document.getElementById("player").width)
+				{
+					floorBottom = 38;dropone();
+				}
+				
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>4895&&moveX_master<6130-document.getElementById("player").width)
+				{
+					floorBottom = 38;dropone();
+				}
+				 
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>6655&&moveX_master<7445-document.getElementById("player").width)
+				{
+					floorBottom = 38;dropone();
+				}
+				
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>8045&&moveX_master<9095-document.getElementById("player").width)
+				{
+					floorBottom = 38;dropone();
+				}
+				
+				if(moveY_master>=71&&moveY_master<88&&moveX_master>9290&&moveX_master<10695-document.getElementById("player").width)
+				{
+					floorBottom = 38;dropone();
+				}
+				
+			}
+			function steptoright(timestamp) {//向右走////////////////////////////////////////////////////
+				facetoright = true;
+				if(pageflag == true)
+				{
+					document.body.scrollLeft = moveX_master-document.body.clientWidth*0.5;
+					document.getElementsByClassName("BloodOfGenji")[0].style.left = document.body.scrollLeft+document.body.clientWidth*0.05 + "px";
+				}
+				dropFloor();//掉下来
+				if((moveY_master<=37)&&(//下面是碰见了墙壁
+					(moveX_master>1825+100-document.getElementById("player").width&&moveX_master<1835+100-document.getElementById("player").width)||
+					(moveX_master>2090+100-document.getElementById("player").width&&moveX_master<2100+100-document.getElementById("player").width)||
+					(moveX_master>4226+100-document.getElementById("player").width&&moveX_master<4236+100-document.getElementById("player").width)||
+					(moveX_master>5690+100-document.getElementById("player").width&&moveX_master<5700+100-document.getElementById("player").width)||
+					(moveX_master>6826+100-document.getElementById("player").width&&moveX_master<6836+100-document.getElementById("player").width)||
+					(moveX_master>10890+100-document.getElementById("player").width&&moveX_master<10900+100-document.getElementById("player").width)
+					
+				))
+				{
+					 X_target = moveX_master;
+				}
+				else if((moveY_master>37)&&(moveY_master<=67)&&(
+					(moveX_master>1935-10-document.getElementById("player").width&&moveX_master<1935-document.getElementById("player").width)||				
+					(moveX_master>3400-10-document.getElementById("player").width&&moveX_master<3400-document.getElementById("player").width)||
+					(moveX_master>4836-10-document.getElementById("player").width&&moveX_master<4836-document.getElementById("player").width)||
+					(moveX_master>4336-10-document.getElementById("player").width&&moveX_master<4336-document.getElementById("player").width)||
+					(moveX_master>6136-10-document.getElementById("player").width&&moveX_master<6136-document.getElementById("player").width)||
+					(moveX_master>6600-10-document.getElementById("player").width&&moveX_master<6600-document.getElementById("player").width)
+				))
+				{
+					 X_target = moveX_master;
+				}
+				else if((moveY_master>67)&&(moveY_master<=97)&&(	
+					(moveX_master>2200-10-document.getElementById("player").width&&moveX_master<2200-document.getElementById("player").width)
+				))
+				{
+					X_target = moveX_master;
+				}
+				//这里是走的部分
+				else
+				{
+					moveX_master += 1;
+				}
+				document.getElementById("master").style.left = moveX_master + "px";
+				if (moveX_master < X_target) {
+					requestAnimationFrame(steptoright);
+				}
+			}
+			function steptoleft(timestamp) {//向左/走/////////////////////////////////////////////////////
+				facetoright = false;
+				if(pageflag == true)
+				{
+				document.body.scrollLeft = moveX_master-document.body.clientWidth*0.5;
+				}
+				dropFloor();//掉下来
+				if((moveY_master<=37)&&(//下面是碰见了墙壁
+						(moveX_master>1825+110+60&&moveX_master<1835+110+60)||
+						(moveX_master>2090+110+60&&moveX_master<2100+110+60)||
+						(moveX_master>4226+110+60&&moveX_master<4236+110+60)||
+						(moveX_master>5690+110+60&&moveX_master<5700+110+60)||
+						(moveX_master>6826+110+60&&moveX_master<6836+110+60)||
+						(moveX_master>10890+110+60&&moveX_master<10900+110+60)
+					
+					))
+				{
+					X_target = moveX_master;
+				}
+				else if((moveY_master>37)&&(moveY_master<=67)&&(
+					(moveX_master>1935-10+70&&moveX_master<1935+70)||				
+					(moveX_master>3400-10+70&&moveX_master<3400+70)||
+					(moveX_master>4836-10+70&&moveX_master<4836+70)||
+					(moveX_master>4336-10+70&&moveX_master<4336+70)||
+					(moveX_master>6136-10+70&&moveX_master<6136+70)||
+					(moveX_master>6600-10+70&&moveX_master<6600+70)
+				))
+				{
+					 X_target = moveX_master;
+				}
+				else if((moveY_master>67)&&(moveY_master<=97)&&(	
+					(moveX_master>2200-10+70&&moveX_master<2200+70)
+				))
+				{
+					X_target = moveX_master;
+				}
+				//真正走的部分
+				else
+				{
+					moveX_master -= 1;
+				}
+			
+				document.getElementById("master").style.left = moveX_master + "px";
+				if (moveX_master > X_target) {
+					requestAnimationFrame(steptoleft);
+				}
+			}
+			function steptodown(timestamp) {//下///////////////////////////////////////
+				moveY_master -= 1;
+				document.getElementById("master").style.bottom = moveY_master +  "%";
+				if (moveY_master < Y_target) {
+					requestAnimationFrame(steptodown);
+				}
+			}
+			function steptoup(timestamp) {//上////////////////////////////////////
+				moveY_master += 1;
+				document.getElementById("master").style.bottom = moveY_master + "%";
+				if (moveY_master < Y_target) {
+					requestAnimationFrame(steptoup);
+				}
+			}
+			function steptojump(timestamp){//跳跃/////////////////////////////////////
+			if(pageflag == true)
+			{
+				document.body.scrollLeft = moveX_master-document.body.clientWidth*0.5;
+			}
+				if((moveY_master<=37)&&(////下面是碰见了墙壁
+					(moveX_master>1825+100-document.getElementById("player").width&&moveX_master<1835+100-document.getElementById("player").width)||
+					(moveX_master>2090+100-document.getElementById("player").width&&moveX_master<2100+100-document.getElementById("player").width)||
+					(moveX_master>4226+100-document.getElementById("player").width&&moveX_master<4236+100-document.getElementById("player").width)||
+					(moveX_master>5690+100-document.getElementById("player").width&&moveX_master<5700+100-document.getElementById("player").width)||
+					(moveX_master>6826+100-document.getElementById("player").width&&moveX_master<6836+100-document.getElementById("player").width)||
+					(moveX_master>10890+100-document.getElementById("player").width&&moveX_master<10900+100-document.getElementById("player").width)
+				
+				))
+				{
+					;
+				}
+				else if((moveY_master>37)&&(moveY_master<=67)&&(
+					(moveX_master>1935-10-document.getElementById("player").width&&moveX_master<1935-document.getElementById("player").width)||				
+					(moveX_master>3400-10-document.getElementById("player").width&&moveX_master<3400-document.getElementById("player").width)||
+					(moveX_master>4836-10-document.getElementById("player").width&&moveX_master<4836-document.getElementById("player").width)||
+					(moveX_master>4336-10-document.getElementById("player").width&&moveX_master<4336-document.getElementById("player").width)||
+					(moveX_master>6136-10-document.getElementById("player").width&&moveX_master<6136-document.getElementById("player").width)||
+					(moveX_master>6600-10-document.getElementById("player").width&&moveX_master<6600-document.getElementById("player").width)
+				))
+				{
+					;
+				}
+				else if((moveY_master>67)&&(moveY_master<=97)&&(	
+					(moveX_master>2200-10-document.getElementById("player").width&&moveX_master<2200-document.getElementById("player").width)
+				))
+				{
+					;
+				}
+				else if((moveY_master<=37)&&(
+					(moveX_master>1825+110+60&&moveX_master<1835+110+60)||
+					(moveX_master>2090+110+60&&moveX_master<2100+110+60)||
+					(moveX_master>4226+110+60&&moveX_master<4236+110+60)||
+					(moveX_master>5690+110+60&&moveX_master<5700+110+60)||
+					(moveX_master>6826+110+60&&moveX_master<6836+110+60)||
+					(moveX_master>10890+110+60&&moveX_master<10900+110+60)
+				
+				))
+				{
+					;
+				}
+				else if((moveY_master>37)&&(moveY_master<=67)&&(
+					(moveX_master>1935-10+70&&moveX_master<1935+70)||				
+					(moveX_master>3400-10+70&&moveX_master<3400+70)||
+					(moveX_master>4836-10+70&&moveX_master<4836+70)||
+					(moveX_master>4336-10+70&&moveX_master<4336+70)||
+					(moveX_master>6136-10+70&&moveX_master<6136+70)||
+					(moveX_master>6600-10+70&&moveX_master<6600+70)
+				))
+				{
+					 ;
+				}
+				else if((moveY_master>67)&&(moveY_master<=97)&&(	
+					(moveX_master>2200-10+70&&moveX_master<2200+70)
+				))
+				{
+					;
+				}
+				//这里是跳跃
+				else
+				{
+					moveX_master += vx;
+				}
+				
+				betweenFloor();//楼层跃迁
+				//这里是跳的部分
+				moveY_master += vy;
+				vy += gravity;
+				if(moveY_master <= floorBottom)
+				{
+					moveY_master = floorBottom;
+				}
+				document.getElementById("master").style.left= moveX_master + "px";
+				document.getElementById("master").style.bottom= moveY_master + "%";
+				if(moveY_master > floorBottom)
+				{
+				
+					requestAnimationFrame(steptojump);
+				}
+			}
+			//alert(document.body.clientWidth);
+			//setInterval(function(){document.body.scrollLeft = moveX_master-document.body.clientWidth*0.5;}, 30);
+			//判断不能二级跳
+			function notjumptwice()//如果处于那些区域则将keyFlag设置为2，即不能跳了
+			{
+				//一层
+				if(moveY_master<38&&moveX_master>=600-document.getElementById("player").width&&moveX_master<=1090)
+				{
+					keyFlag = 2;
+				}
+				if(moveY_master<38&&moveX_master>=1500-document.getElementById("player").width&&moveX_master<=2000)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master<38&&moveX_master>=2200-document.getElementById("player").width&&moveX_master<=3195)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master<38&&moveX_master>=3450-document.getElementById("player").width&&moveX_master<=3690)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master<38&&moveX_master>=3895-document.getElementById("player").width&&moveX_master<=4325)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master<38&&moveX_master>=4595-document.getElementById("player").width&&moveX_master<=5590)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master<38&&moveX_master>=5795-document.getElementById("player").width&&moveX_master<=6130)
+				{
+					keyFlag = 2;
+				}
+				if(moveY_master<38&&moveX_master>=6670-document.getElementById("player").width&&moveX_master<=6990)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master<38&&moveX_master>=7295-document.getElementById("player").width&&moveX_master<=7590)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master<38&&moveX_master>=7895-document.getElementById("player").width&&moveX_master<=8190)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master<38&&moveX_master>=9095-document.getElementById("player").width&&moveX_master<=9490)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master<38&&moveX_master>=10695-document.getElementById("player").width&&moveX_master<=11000)
+				{
+					keyFlag = 2;
+				}
+				/////////////////////////二层
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=795-document.getElementById("player").width&&moveX_master<=1995)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=2200-document.getElementById("player").width&&moveX_master<=2990)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=3195-document.getElementById("player").width&&moveX_master<=3895)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=4095-document.getElementById("player").width&&moveX_master<=4895)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=6130-document.getElementById("player").width&&moveX_master<=6655)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=7445-document.getElementById("player").width&&moveX_master<=8045)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=9095-document.getElementById("player").width&&moveX_master<=9290)
+				{
+					keyFlag = 2;
+				}
+				
+				if(moveY_master>=38&&moveY_master<71&&moveX_master>=10695-document.getElementById("player").width&&moveX_master<=11000)
+				{
+					keyFlag = 2;
+				}
+				//第三层的
+				if(moveY_master >= 71)
+				{
+					keyFlag = 2;
+				}
+			
+			}
+				
+			
+			document.onkeydown=function(event)//w 87, s 83, a 65, d 68//按键控制
+			{
+				var e = event || window.event || arguments.callee.caller.arguments[0];
+				if(e && e.keyCode=="68")//右
+				{
+					vx = 1.0;
+					document.getElementById("player").src = "00.png";
+					X_target = moveX_master + 10;
+					requestAnimationFrame(steptoright);
+				}  
+				if(e && e.keyCode=="65")//左
+				{
+					vx = -1.0;
+					document.getElementById("player").src = "11.png";
+					X_target = moveX_master - 10;
+					requestAnimationFrame(steptoleft);
+				} 
+				if(e && e.keyCode=="87")//上
+				{
+					//vx =0;
+					//Y_target = moveY_master +1;
+					//requestAnimationFrame(steptoup);
+				} 
+				if(e && e.keyCode=="83")//下
+				{ 
+					//vx =0;
+					//Y_target = moveY_master -1;
+					//requestAnimationFrame(steptodown);
+				} 
+				if(e && e.keyCode=="32")//空格
+				{ 
+					if(moveY_master <= floorBottom)
+					{
+						keyFlag = 0;
+					}
+					keyFlag++;
+					
+					if(keyFlag < 3)
+					{
+						//vx = 0;
+						vy = 1;
+						gravity = -0.035;
+						if(keyFlag==2)
+						{
+							gravity = -0.023;
+						}
+						notjumptwice();
+						requestAnimationFrame(steptojump);
+					}
+				} 
+			}
+			//下面是发射飞镖事件（鼠标点击事件）
+			
+			function dartmovetoright(timestamp)
+			{	dartX+=6;
+				document.getElementById("darts").style.left= dartX+ "px";
+				if((dartY<=37)&&(//判断撞见墙壁
+					(dartX>1825+100+100-document.getElementById("dart").width&&dartX<1835+100+100-document.getElementById("dart").width)||
+					(dartX>2090+100+100-document.getElementById("dart").width&&dartX<2100+100+100-document.getElementById("dart").width)||
+					(dartX>4226+100+100-document.getElementById("dart").width&&dartX<4236+100+100-document.getElementById("dart").width)||
+					(dartX>5690+100+100-document.getElementById("dart").width&&dartX<5700+100+100-document.getElementById("dart").width)||
+					(dartX>6826+100+100-document.getElementById("dart").width&&dartX<6836+100+100-document.getElementById("dart").width)||
+					(dartX>10890+100+100-document.getElementById("dart").width&&dartX<10900+100+100-document.getElementById("dart").width)
+					
+				))
+				{
+					dartTarget=dartX;
+				}
+				if((dartY>37)&&(dartY<=67)&&(
+					(dartX>1935-10+100-document.getElementById("dart").width&&dartX<1935+100-document.getElementById("dart").width)||				
+					(dartX>3400-10+100-document.getElementById("dart").width&&dartX<3400+100-document.getElementById("dart").width)||
+					(dartX>4836-10+100-document.getElementById("dart").width&&dartX<4836+100-document.getElementById("dart").width)||
+					(dartX>4336-10+100-document.getElementById("dart").width&&dartX<4336+100-document.getElementById("dart").width)||
+					(dartX>6136-10+100-document.getElementById("dart").width&&dartX<6136+100-document.getElementById("dart").width)||
+					(dartX>6600-10+100-document.getElementById("dart").width&&dartX<6600+100-document.getElementById("dart").width)
+				))
+				{
+					 dartTarget=dartX;
+				}
+				if((dartY>67)&&(dartY<=97)&&(	
+					(dartX>2200-10+100-document.getElementById("dart").width&&dartX<2200+100-document.getElementById("dart").width)
+				))
+				{
+					dartTarget=dartX;
+				}
+				//飞镖飞的部分
+				if(dartX<dartTarget)
+				{
+					requestAnimationFrame(dartmovetoright);
+				}
+				else
+				{
+					document.getElementById("darts").style.left= -1000+ "px";
+				}
+			}
+			function dartmovetoleft(timestamp)//向左的飞镖
+			{	dartX-=6;
+				document.getElementById("darts").style.left= dartX+ "px";
+				if((dartY<=37)&&(
+					(dartX>1825+100+70-document.getElementById("dart").width&&dartX<1835+100+70-document.getElementById("dart").width)||
+					(dartX>2090+100+70-document.getElementById("dart").width&&dartX<2100+100+70-document.getElementById("dart").width)||
+					(dartX>4226+100+70-document.getElementById("dart").width&&dartX<4236+100+70-document.getElementById("dart").width)||
+					(dartX>5690+100+70-document.getElementById("dart").width&&dartX<5700+100+70-document.getElementById("dart").width)||
+					(dartX>6826+100+70-document.getElementById("dart").width&&dartX<6836+100+70-document.getElementById("dart").width)||
+					(dartX>10890+100+70-document.getElementById("dart").width&&dartX<10900+100+70-document.getElementById("dart").width)
+					
+				))
+				{
+					dartTarget=dartX;
+				}
+				if((dartY>37)&&(dartY<=67)&&(
+					(dartX>1935-10+70-document.getElementById("dart").width&&dartX<1935+70-document.getElementById("dart").width)||				
+					(dartX>3400-10+70-document.getElementById("dart").width&&dartX<3400+70-document.getElementById("dart").width)||
+					(dartX>4836-10+70-document.getElementById("dart").width&&dartX<4836+70-document.getElementById("dart").width)||
+					(dartX>4336-10+70-document.getElementById("dart").width&&dartX<4336+70-document.getElementById("dart").width)||
+					(dartX>6136-10+70-document.getElementById("dart").width&&dartX<6136+70-document.getElementById("dart").width)||
+					(dartX>6600-10+70-document.getElementById("dart").width&&dartX<6600+70-document.getElementById("dart").width)
+				))
+				{
+					 dartTarget=dartX;
+				}
+				if((dartY>67)&&(dartY<=97)&&(	
+					(dartX>2200-10+70-document.getElementById("dart").width&&dartX<2200+70-document.getElementById("dart").width)
+				))
+				{
+					dartTarget=dartX;
+				}
+				if(dartX>dartTarget)
+				{
+					requestAnimationFrame(dartmovetoleft);
+				}
+				else
+				{
+					document.getElementById("darts").style.left= -10000+ "px";
+				}
+			}
+			document.onclick=function(event)//鼠标事件，飞飞镖
+			{
+				var e = event || window.event || arguments.callee.caller.arguments[0];
+				if(facetoright)
+				{
+
+					dartTarget = moveX_master+1000+document.getElementById("player").width * 0.9;
+					dartX = moveX_master + document.getElementById("player").width * 0.9;
+					dartY = moveY_master+4;		
+					document.getElementById("darts").style.left= dartX+ "px";
+					document.getElementById("darts").style.bottom= dartY+ "%";	
+					requestAnimationFrame(dartmovetoright);
+				}
+				else
+				{
+
+					dartTarget = moveX_master-1000;
+					dartX = moveX_master;
+					dartY = moveY_master+4;		
+					document.getElementById("darts").style.left= dartX+ "px";
+					document.getElementById("darts").style.bottom= dartY+ "%";	
+					requestAnimationFrame(dartmovetoleft);
+				}
+				
+			}
+			//下面来控制炮台的子弹
+			var x_bullet = new Array(2200,1500,2200,3400,4000,5700,7200,7900,1200,2200,3400,6200,7600);
+			var y_bullet = new Array(5,38,38,38,38,38,38,38,71,71,71,71,71);
+			var x_temp_bullet = new Array(0,0,0,0,0,0,0,0,0,0,0,0,0);
+				document.getElementsByClassName("bullet")[0].style.left = x_bullet[0]+250 + "px";
+				document.getElementsByClassName("bullet")[0].style.bottom = document.body.clientHeight * 0.115 + "px";//you
+				
+				document.getElementsByClassName("bullet")[1].style.left = x_bullet[1]+ 80+"px";
+				document.getElementsByClassName("bullet")[1].style.bottom = document.body.clientHeight * 0.115 + "px";
+				document.getElementsByClassName("bullet")[2].style.left = x_bullet[2]+ 80 + "px";
+				document.getElementsByClassName("bullet")[2].style.bottom = document.body.clientHeight * 0.115 + "px";
+				document.getElementsByClassName("bullet")[3].style.left = x_bullet[3]+250 + "px";
+				document.getElementsByClassName("bullet")[3].style.bottom = document.body.clientHeight * 0.115 + "px";//you
+				document.getElementsByClassName("bullet")[4].style.left = x_bullet[4]+ 80+ "px";
+				document.getElementsByClassName("bullet")[4].style.bottom = document.body.clientHeight * 0.115 + "px";
+				document.getElementsByClassName("bullet")[5].style.left = x_bullet[5]+ 80 + "px";
+				document.getElementsByClassName("bullet")[5].style.bottom = document.body.clientHeight * 0.115 + "px";
+				document.getElementsByClassName("bullet")[6].style.left = x_bullet[6]+ 80 + "px";
+				document.getElementsByClassName("bullet")[6].style.bottom = document.body.clientHeight * 0.115 + "px";
+				document.getElementsByClassName("bullet")[7].style.left = x_bullet[7]+ 80 + "px";
+				document.getElementsByClassName("bullet")[7].style.bottom = document.body.clientHeight * 0.115 + "px";
+				
+				document.getElementsByClassName("bullet")[8].style.left = x_bullet[8]+ 80 + "px";
+				document.getElementsByClassName("bullet")[8].style.bottom = document.body.clientHeight * 0.115 + "px";
+				document.getElementsByClassName("bullet")[9].style.left = x_bullet[9]+250 + "px";
+				document.getElementsByClassName("bullet")[9].style.bottom = document.body.clientHeight * 0.115 + "px";//you
+				document.getElementsByClassName("bullet")[10].style.left = x_bullet[10]+ 80 + "px";
+				document.getElementsByClassName("bullet")[10].style.bottom = document.body.clientHeight * 0.115 + "px";
+				document.getElementsByClassName("bullet")[11].style.left = x_bullet[11]+ 80 + "px";
+				document.getElementsByClassName("bullet")[11].style.bottom = document.body.clientHeight * 0.115 + "px";
+				document.getElementsByClassName("bullet")[12].style.left = x_bullet[12]+ 80 + "px";
+				document.getElementsByClassName("bullet")[12].style.bottom = document.body.clientHeight * 0.115 + "px";
+			function bulletfly0()
+			{
+				x_temp_bullet[0] += 6;
+				document.getElementsByClassName("bullet")[0].style.left = x_temp_bullet[0]+250 + x_bullet[0]+ "px";
+				if (x_temp_bullet[0] < 800) {
+					requestAnimationFrame(bulletfly0);
+				}
+				else
+				{
+					x_temp_bullet[0]= 0;
+					requestAnimationFrame(bulletfly0);
+				}
+			};
+			requestAnimationFrame(bulletfly0);
+			function bulletfly3()
+			{
+				x_temp_bullet[3] += 6;
+				document.getElementsByClassName("bullet")[3].style.left = x_temp_bullet[3]+250 + x_bullet[3]+ "px";
+				if (x_temp_bullet[3] < 630) {
+					requestAnimationFrame(bulletfly3);
+				}
+				else
+				{
+					x_temp_bullet[3]= 0;
+					requestAnimationFrame(bulletfly3);
+				}
+			};
+			requestAnimationFrame(bulletfly3);
+			function bulletfly9()
+			{
+				x_temp_bullet[9] += 6;
+				document.getElementsByClassName("bullet")[9].style.left = x_temp_bullet[9]+250 + x_bullet[9]+ "px";
+				if (x_temp_bullet[9] < 800) {
+					requestAnimationFrame(bulletfly9);
+				}
+				else
+				{
+					x_temp_bullet[9]= 0;
+					requestAnimationFrame(bulletfly9);
+				}
+			};
+			requestAnimationFrame(bulletfly9);
+			
+			function bulletfly1()
+			{
+				x_temp_bullet[1] -= 6;
+				document.getElementsByClassName("bullet")[1].style.left = x_temp_bullet[1]+80 + x_bullet[1]+ "px";
+				if (x_temp_bullet[1] > -800) {
+					requestAnimationFrame(bulletfly1);
+				}
+				else
+				{
+					x_temp_bullet[1]= 0;
+					requestAnimationFrame(bulletfly1);
+				}
+			};
+			requestAnimationFrame(bulletfly1);
+			function bulletfly2()
+			{
+				x_temp_bullet[2] -= 6;
+				document.getElementsByClassName("bullet")[2].style.left = x_temp_bullet[2]+80 + x_bullet[2]+ "px";
+				if (x_temp_bullet[2] > -300) {
+					requestAnimationFrame(bulletfly2);
+				}
+				else
+				{
+					x_temp_bullet[2]= 0;
+					requestAnimationFrame(bulletfly2);
+				}
+			};
+			requestAnimationFrame(bulletfly2);
+			function bulletfly4()
+			{
+				x_temp_bullet[4] -= 6;
+				document.getElementsByClassName("bullet")[4].style.left = x_temp_bullet[4]+80 + x_bullet[4]+ "px";
+				if (x_temp_bullet[4] > -630) {
+					requestAnimationFrame(bulletfly4);
+				}
+				else
+				{
+					x_temp_bullet[4]= 0;
+					requestAnimationFrame(bulletfly4);
+				}
+			};
+			requestAnimationFrame(bulletfly4);
+			function bulletfly5()
+			{
+				x_temp_bullet[5] -= 6;
+				document.getElementsByClassName("bullet")[5].style.left = x_temp_bullet[5]+80 + x_bullet[5]+ "px";
+				if (x_temp_bullet[5] > -800) {
+					requestAnimationFrame(bulletfly5);
+				}
+				else
+				{
+					x_temp_bullet[5]= 0;
+					requestAnimationFrame(bulletfly5);
+				}
+			};
+			requestAnimationFrame(bulletfly5);
+			function bulletfly6()
+			{
+				x_temp_bullet[6] -= 6;
+				document.getElementsByClassName("bullet")[6].style.left = x_temp_bullet[6]+80 + x_bullet[6]+ "px";
+				if (x_temp_bullet[6] > -600) {
+					requestAnimationFrame(bulletfly6);
+				}
+				else
+				{
+					x_temp_bullet[6]= 0;
+					requestAnimationFrame(bulletfly6);
+				}
+			};
+			requestAnimationFrame(bulletfly6);
+			function bulletfly7()
+			{
+				x_temp_bullet[7] -= 6;
+				document.getElementsByClassName("bullet")[7].style.left = x_temp_bullet[7]+80 + x_bullet[7]+ "px";
+				if (x_temp_bullet[7] > -800) {
+					requestAnimationFrame(bulletfly7);
+				}
+				else
+				{
+					x_temp_bullet[7]= 0;
+					requestAnimationFrame(bulletfly7);
+				}
+			};
+			requestAnimationFrame(bulletfly7);
+			function bulletfly8()
+			{
+				x_temp_bullet[8] -= 6;
+				document.getElementsByClassName("bullet")[8].style.left = x_temp_bullet[8]+80 + x_bullet[8]+ "px";
+				if (x_temp_bullet[8] > -800) {
+					requestAnimationFrame(bulletfly8);
+				}
+				else
+				{
+					x_temp_bullet[8]= 0;
+					requestAnimationFrame(bulletfly8);
+				}
+			};
+			requestAnimationFrame(bulletfly8);
+			function bulletfly10()
+			{
+				x_temp_bullet[10] -= 6;
+				document.getElementsByClassName("bullet")[10].style.left = x_temp_bullet[10]+80 + x_bullet[10]+ "px";
+				if (x_temp_bullet[10] > -800) {
+					requestAnimationFrame(bulletfly10);
+				}
+				else
+				{
+					x_temp_bullet[10]= 0;
+					requestAnimationFrame(bulletfly10);
+				}
+			};
+			requestAnimationFrame(bulletfly10);
+			function bulletfly11()
+			{
+				x_temp_bullet[11] -= 6;
+				document.getElementsByClassName("bullet")[11].style.left = x_temp_bullet[11]+80 + x_bullet[11]+ "px";
+				if (x_temp_bullet[11] > -800) {
+					requestAnimationFrame(bulletfly11);
+				}
+				else
+				{
+					x_temp_bullet[11]= 0;
+					requestAnimationFrame(bulletfly11);
+				}
+			};
+			requestAnimationFrame(bulletfly11);
+			function bulletfly12()
+			{
+				x_temp_bullet[12] -= 6;
+				document.getElementsByClassName("bullet")[12].style.left = x_temp_bullet[12]+80 + x_bullet[12]+ "px";
+				if (x_temp_bullet[12] > -800) {
+					requestAnimationFrame(bulletfly12);
+				}
+				else
+				{
+					x_temp_bullet[12]= 0;
+					requestAnimationFrame(bulletfly12);
+				}
+			};
+			requestAnimationFrame(bulletfly12);
+			//下面判断是否有伤害
+			//飞镖伤害炮台
+			var ptBlood = new Array(100,100,100,100,100,100,100,100,100,100,100,100,100);
+			var hurtpt0 = null;
+			function fbHurtpt()
+			{
+				var EMID = arguments[0]; 
+				var bot = arguments[1];
+				if((dartY >bot)&&(dartY < bot+5)&&(dartX>x_bullet[EMID]+80)&&(dartX < x_bullet[EMID] + 250))
+				{
+					dartTarget=dartX;
+					ptBlood[EMID]-=30;
+					console.log(ptBlood[EMID]);
+					if(ptBlood[EMID] < 0)
+					{
+						document.getElementsByClassName("EMPIC")[EMID].src="Boom.png";
+						//boomSound.load();
+						boomSound.play();
+						setTimeout(function(){boomSound.pause();
+						document.getElementsByClassName("EM")[EMID].style.left = -10000+"px";
+						x_bullet[EMID] = -10000;},1000);
+						
+					}
+				}
+				
+			}
+			function fbHurtptall()
+			{
+				fbHurtpt(0,5);
+				fbHurtpt(1,38);
+				fbHurtpt(2,38);
+				fbHurtpt(3,38);
+				fbHurtpt(4,38);
+				fbHurtpt(5,38);
+				fbHurtpt(6,38);
+				fbHurtpt(7,38);
+				fbHurtpt(8,71);
+				fbHurtpt(9,71);
+				fbHurtpt(10,71);
+				fbHurtpt(11,71);
+				fbHurtpt(12,71);
+			}
+			hurtpt0 = setInterval(fbHurtptall,100);
+			//子弹伤害主人公
+			var masterBlood = 6;
+			function hurtMaster()
+			{
+				var EMID = arguments[0]; 
+				var bot=arguments[1];
+				var plus = arguments[2];
+				if(moveY_master >= bot&& moveY_master< bot+5&&x_temp_bullet[EMID]+plus + x_bullet[EMID]>moveX_master&&x_temp_bullet[EMID]+plus + x_bullet[EMID]<moveX_master + 100)
+				{
+					x_temp_bullet[EMID]= 0;
+					masterBlood--;
+				}
+			}
+			var showFlag = 0;
+			function masterDead()
+			{
+				if(masterBlood <= 0)//注释掉这部分会处于无敌模式
+				{
+					//moveX_master = -100000;
+					//document.getElementById("master").style.left = moveX_master + "px";
+					//pageflag = false;
+				}
+				if(moveX_master >=11000-document.body.clientWidth*0.5 )
+				{
+					pageflag = false;
+					if(showFlag==0)
+					{
+						showFlag = 1;
+					}
+				}
+			}
+			//对战半藏的部分
+			var BZposition = 0;
+			var WX = 11000 - document.body.clientWidth * 0.3;
+			var WY = 71;
+			var WTarget = 11000 - document.body.clientWidth;
+			function BZpos()
+			{
+				if(BZposition%3 == 0)
+				{
+					document.getElementsByClassName("Hanzo")[0].style.bottom = 70+"%";
+					WY = 70;
+				}
+				else if(BZposition%3 == 1)
+				{
+					document.getElementsByClassName("Hanzo")[0].style.bottom = 38+"%";
+					WY = 38;
+				}
+				else
+				{
+					document.getElementsByClassName("Hanzo")[0].style.bottom = 5+"%";
+					WY = 5;
+				}
+				BZposition = Math.floor(Math.random()*3 + 1);
+			}
+			//半藏的箭法
+			function shoo()
+			{
+				
+				WX -= 10;
+				document.getElementById("weapen").style.left = WX + "px";
+				if(WX > WTarget)
+				{
+					requestAnimationFrame(shoo);
+				}
+				else
+				{
+					document.getElementById("weapen").style.bottom = WY + "%";
+					document.getElementById("weapen").style.left =11000 - document.body.clientWidth * 0.3 + "px";
+					WX = 11000 - document.body.clientWidth * 0.3;
+					requestAnimationFrame(shoo);
+				}
+				
+			}
+			//半藏出场动画
+
+			function showMP4()
+			{
+				myAudio.pause();
+				document.getElementById("videoShow").src="show.mp4";
+				document.body.scrollLeft = 12000;
+				setTimeout(function(){var myVideo = document.getElementById("videoShow");myVideo.play();}, 0);
+				setTimeout(function(){document.getElementById("videoShow").src=null;document.body.scrollLeft = 11000 - document.body.clientWidth;document.getElementById("BOSSBZ").src="12.png";setInterval(BZpos,3000);requestAnimationFrame(shoo);myAudio.play();}, 10000);
+			}
+			//半藏射中
+			function shootatmaster()
+			{
+				if(moveX_master < WX&&moveX_master > WX - 100&&moveY_master<=WY+5 && moveY_master>=WY - 5)
+				{
+					masterBlood-=2;
+					WX = 11000 - document.body.clientWidth * 2.3 ;
+				}
+			}
+			var BossBlood = 6;
+			var overFlag = 0;
+			//射中半藏
+			function shootatBOSS()
+			{
+				if(dartY>=WY&&dartY<=WY+20&&dartX>11000 - document.body.clientWidth*0.2&&dartX<11000)
+				{
+					dartTarget = dartX;
+					BossBlood -=2;
+					if(BossBlood <= 0)
+					{
+						overFlag = 1;
+					}
+					
+				}
+			}
+			//胜利的结束
+			function overMP4()
+			{
+				myAudio.pause();
+				document.getElementById("videoShow").src="over.mp4";
+				document.body.scrollLeft = 12000;
+				var myVideo = document.getElementById("videoShow");
+				myVideo.play();
+				setTimeout(function(){myVideo.pause();myAudio.play();},43000);
+			}
+			var setI = null;
+			function hurtMasterall()
+			{
+				shootatmaster();
+				shootatBOSS();
+				hurtMaster(0,5,250);
+				
+				hurtMaster(1,38,80);
+				hurtMaster(2,38,80);
+				hurtMaster(3,38,250);
+				hurtMaster(4,38,80);
+				hurtMaster(5,38,80);
+				hurtMaster(6,38,80);
+				hurtMaster(7,38,80);
+				
+				hurtMaster(8,71,80);
+				hurtMaster(9,71,250);
+				hurtMaster(10,71,80);
+				hurtMaster(11,71,80);
+				hurtMaster(12,71,80);
+				if(showFlag == 1)
+				{
+					showMP4();
+					showFlag = 2 ;
+				}
+				if(overFlag == 1)
+				{
+					overMP4();
+					clearInterval(setI);
+					overFlag = 2;
+				}
+				masterDead();
+			}
+			setI = setInterval(hurtMasterall,100);
+		
+	</script>
+
+</body>
+</html>
